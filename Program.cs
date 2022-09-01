@@ -18,23 +18,45 @@
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int NumSum(int number)
+// int NumSum(int number)
+// {
+//     int count = Convert.ToString(number).Length;
+//     int number2 = 0;
+//     int result = 0;
+
+//     for (int i = 0; i < count; i++)
+//     {
+//         number2 = number - number % 10;
+//         result = result + (number - number2);
+//         number = number / 10;
+//     }
+//     return result;
+// }
+
+// int numsum = NumSum(number);
+// Console.WriteLine($"Сумма цифр в числе = {numsum}");
+
+// Задача 29. Пользователь вводит число элементов в массиве и минимальное и максимальное значения элементов массива. 
+// Необходимо заполнить массив рандоными данными от минимального до максимального значения и вывести его.
+
+Console.Write("Введите число элементов в массиве: ");
+int lengtharr = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите минимальное значение элемента массива: ");
+int minmean = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите максимальное значение элемента массива: ");
+int maxmean = Convert.ToInt32(Console.ReadLine());
+
+int[] array = new int[lengtharr];
+
+Random rnd = new Random();
+
+for (int i = 0; i < lengtharr; i++)
 {
-    int count = Convert.ToString(number).Length;
-    int number2 = 0;
-    int result = 0;
-
-    for (int i = 0; i < count; i++)
-    {
-        number2 = number - number % 10;
-        result = result + (number - number2);
-        number = number / 10;
-    }
-    return result;
+    array[i] = rnd.Next(maxmean);
+    Console.Write(array[i] + " ");
 }
-
-int numsum = NumSum(number);
-Console.WriteLine($"Сумма цифр в числе = {numsum}");
