@@ -45,6 +45,12 @@
 Console.Write("Введите число элементов в массиве: ");
 int lengtharr = Convert.ToInt32(Console.ReadLine());
 
+while (lengtharr <= 1 )
+{
+    Console.Write("Это уже не массив какой-то!!! Введите число элементов в массиве: ");
+    lengtharr = int.Parse(Console.ReadLine());
+}
+
 Console.Write("Введите минимальное значение элемента массива: ");
 int minmean = Convert.ToInt32(Console.ReadLine());
 
@@ -66,6 +72,3 @@ for (int i = 0; i < lengtharr; i++)
 
 Console.WriteLine();
 ArrayPrint(array);
-
-
-
