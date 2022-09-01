@@ -53,10 +53,19 @@ int maxmean = Convert.ToInt32(Console.ReadLine());
 
 int[] array = new int[lengtharr];
 
-Random rnd = new Random();
-
+void ArrayPrint(int[] array)
+{
 for (int i = 0; i < lengtharr; i++)
 {
-    array[i] = rnd.Next(maxmean);
+    array[i] = new Random().Next(minmean, maxmean);
+    array [0] = minmean;
+    array [1] = maxmean;
     Console.Write(array[i] + " ");
 }
+}
+
+Console.WriteLine();
+ArrayPrint(array);
+
+
+
